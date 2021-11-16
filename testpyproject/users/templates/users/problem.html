@@ -1,0 +1,58 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<link rel="stylesheet" href="../../static/users/problem.css">
+
+<body>
+    <section>
+        <img src="../../static/assets/stars.png" id="stars">
+        <img src="../../static/assets/moon.png" id="moon">
+        <img src="../../static/assets/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Le Problème ?</h2>
+        <a href="#sec" id="btn">Découvre le problème...</a>
+        <img src="../../static/assets/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Le Problème...</h2>
+        <p>Aujourd'hui, je suis actuellement en Master LeadDev pour finaliser mes études et obtenir mon diplôme.<br>
+            Le problème aujourd'hui est que je suis surmotivé pour trouver une alternance afin de prouver ma valeur...
+            <br>Je ne suis pas parfait mais je demande d'en apprendre toujours plus...
+            Je sais que je n'ai pas répondu à toutes les attentes de ce test mais j'ai donné tout le temps que j'avais
+            pour effectuer au mieux ce test <br><br>
+            Ce que j'ai pu produire c'est:<br>
+            Pouvoir Créer un compte <br>
+            Pouvoir se connecter / Déconnexion <br>
+            Accéder à une page pour modifier ces informations de compte <br>
+            Accéder à une modale <br><br>
+            Docker n'a pas été mis en place tout comme la POO dans le rendu final mais j'ai pu effectuer plusieurs tests de projet
+            en essayant d'utiliser docker et la POO mais j'ai préféré rendre cette version qui pour moi est la plus aboutie<br><br>
+            Et malgré mon échec sur ces points j'ai quand même appris pas mal de choses sur docker et son utilisation et ça me donne
+            l'envie d'en apprendre davantage....<br><br>
+            Donc pour résumer mon problème il me manque cette entreprise dans laquelle je suis prêt à me surpasser.
+        </p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px'
+            moon.style.top = value * 1.05 + 'px'
+            mountains_behind.style.top = value * 0.5 + 'px'
+            mountains_front.style.top = value * 0 + 'px'
+            text.style.marginRight = value * 4 + 'px'
+            text.style.marginTop = value * 1.5 + 'px'
+            btn.style.marginTop = value * 1.5 + 'px'
+
+        })
+    </script>
+</body>
+
+{% endblock %}

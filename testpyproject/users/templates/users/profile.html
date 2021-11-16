@@ -1,0 +1,32 @@
+{% extends 'users/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<link rel="stylesheet" href="../../static/users/profile.css">
+    <div class="container">
+        <h2>{{user.username}}</h2>
+    <h2>{{user.email}}</h2>
+    </div>
+
+    <body>
+        <button id="modalBtn" class="button">Changer d'adresse mail</button>
+
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span>
+                    <h2>Changement d'information de compte</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Changement d'adresse mail</p>
+                    <input type="text">
+                </div> 
+                <div class="modal-footer">
+                    <button>Enregistrer</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="../../static/users/profile.js"></script>
+    </body>
+{% endblock %}

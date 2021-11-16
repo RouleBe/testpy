@@ -1,0 +1,27 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    min-height: 100vh;
+    background: linear-gradient(#b43604, #f0e006);
+}
+.sec{
+    position: relative;
+    padding: 100px;
+    background: #b43604;
+}
+.sec h1{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.sec p{
+    font-size: 1em;
+    color: #fff;
+    
+}
